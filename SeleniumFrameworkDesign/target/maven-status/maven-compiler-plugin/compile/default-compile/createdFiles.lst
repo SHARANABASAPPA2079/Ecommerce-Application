@@ -1,0 +1,7 @@
+EcommerceApplicationPractice\pageObjects\LandingPage.class
+EcommerceApplicationPractice\pageObjects\OrderPage.class
+EcommerceApplicationPractice\pageObjects\CheckoutPage.class
+EcommerceApplicationPractice\pageObjects\ConfirmationPage.class
+sharanpadashetty\AbstractComponents\AbstractComponents.class
+EcommerceApplicationPractice\pageObjects\CartPage.class
+EcommerceApplicationPractice\pageObjects\ProductCatalogue.class

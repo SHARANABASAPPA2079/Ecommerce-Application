@@ -58,6 +58,10 @@ public class StandaloneTestOne
 		String conMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(conMsg.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 		System.out.println("THANKYOU FOR THE ORDER.");
+		//USA 
+		System.out.println("THANKYOU FOR THE ORDER.");
+		System.out.println("THANKYOU FOR THE ORDER.");
+		System.out.println("THANKYOU FOR THE ORDER.");
 		
 		driver.close();
 	

@@ -57,6 +57,8 @@ public class StandaloneTestOne
 		driver.findElement(By.cssSelector(".btnn.action__submit.ng-star-inserted")).click();
 		String conMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(conMsg.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+		System.out.println("THANKYOU FOR THE ORDER.");
+		
 		driver.close();
 	
 	}

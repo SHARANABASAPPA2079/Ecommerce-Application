@@ -14,8 +14,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-
-
 public class StandaloneTestOne
 
 {
@@ -43,13 +41,14 @@ public class StandaloneTestOne
 		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
 
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		
+
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		//cartProducts.stream().filter(cartProduct->cartProduct.getText().equalsIgnoreCase(productName));
-		Boolean match =  cartProducts.stream().anyMatch(cartProduct->cartProduct.getText().equalsIgnoreCase(productName));
+		// cartProducts.stream().filter(cartProduct->cartProduct.getText().equalsIgnoreCase(productName));
+		Boolean match = cartProducts.stream()
+				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
 		Assert.assertTrue(match);
 		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
+
 		Actions a = new Actions(driver);
 		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
@@ -57,16 +56,9 @@ public class StandaloneTestOne
 		driver.findElement(By.cssSelector(".btnn.action__submit.ng-star-inserted")).click();
 		String conMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(conMsg.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		System.out.println("THANKYOU FOR THE ORDER.");
-		//USA 
-		System.out.println("THANKYOU FOR THE ORDER.");
-		System.out.println("THANKYOU FOR THE ORDER.");
-		System.out.println("THANKYOU FOR THE ORDER.");
-		System.out.println("Git branching concept start here");
-		
-		System.out.println("American develeopment written latest codè");
+
 		driver.close();
-	
+
 	}
 
 }
